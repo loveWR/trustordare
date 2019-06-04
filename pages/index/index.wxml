@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<!-- <modal-ad></modal-ad> -->
+<view class="page">
+
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view class='showcase' style="background-color:{{bgcolor[activeIndex]}};">
+        <text class="page__bd_spacing question" style="color:{{txtcolor[activeIndex]}};">{{question}}</text>
+      </view>
+      <text class='page__bd_spacing location' style="color:{{txtcolor[activeIndex]}};">{{rand+1}}/{{totalNum}}</text>
+    </view>
+  </view>
+  <view class='page__bd_spacing margin-xs'>
+    <view class="weui-flex">
+      <button class="weui-flex__item btn-left" type="default" open-type="share">分享</button>
+      <button class="weui-flex__item " type="primary" bindtap="bindNext">下一题</button>
+      <button class="weui-flex__item  btn-right" type="success" bindtap="start">开始</button>
+    </view>
+  </view>
+  <view class='page__bd_spacing margin-xs'>
+    <checkbox-group class="btn-sort" bindchange="bindSortChange">
+      <label class="" for="checkSort">
+        <checkbox class="weui-agree__checkbox" id="checkSort" value="rand" checked="{{isRand}}" />
+        <view class="weui-agree__checkbox-icon">
+          <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isRand}}"></icon>
+        </view> 随机
+      </label>
+    </checkbox-group> 
+    
+    <view class="weui-cell"  >
+                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="moreGame">
+                    <image src="https://it.songvii.com/upload/applist/icon_more.jpg" style="width: 50px; height: 50px; display: block"/>
+                    <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">!</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <view  bindtap="moreGame">更多精彩，等你来玩</view>
+                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="video_ad">点击开启</button>
+                </view>
+            </view>
+      <!-- <view class="weui-cell" wx:for="{{app}}" wx:key="k" >
+                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="jump" data-appid="{{item.appid}}">
+                    <image src="{{item.icon}}" style="width: 50px; height: 50px; display: block"/>
+                    
+                </view>
+                <view class="weui-cell__bd">
+                    <view  bindtap="jump" data-appid="{{item.appid}}">{{item.content}}</view>
+                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="jump" data-appid="{{item.appid}}">{{item.button}}</button>
+                </view>
+            </view> -->
+      <!-- <view class="weui-cell">
+                <view  class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                    <image src="/images/zgjm.jpg" style="width: 50px; height: 50px; display: block"/>
+                   
+                </view>
+                <view  class="weui-cell__bd">
+                    <view>梦见了什么？</view>
+                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="zgjm">周公解梦</button>
+                </view>
+            </view> -->
+     <!-- <navigator url='/pages/zgjm/index' class='more '>周公解梦>>></navigator> -->
+     <!-- <image src='/images/guanzhu.gif' mode='widthFix' class='guanzhu'></image> -->
+     <ad class='ad' style="margin-top:30px" unit-id="{{ad_id}}"></ad>
+     
+     
+     <!-- <button plain='true' class="grace-boxes-img grace-iconfont icon-write " size='mini' open-type="getUserInfo" bindgetuserinfo="bindSubmit">
+      提交题目
+    </button> -->
+
+  </view>
+  
+</view>
+
+<view class='about'>
+      <navigator url='/pages/joe/joe' >关于</navigator>
+     </view>
+

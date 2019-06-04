@@ -1,0 +1,14 @@
+/* pages/index/start.wxss */
+.container{
+  align-content: center;
+  text-align: center
+}
+
+Page {
+    color: white;
+    background-color: #353439;
+}
+.foot_text{
+  margin-top:20px; 
+  padding: 5px
+}

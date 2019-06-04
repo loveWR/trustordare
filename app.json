@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/start",
+    "pages/joe/joe",
+    "components/modal-ad/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#393a3e",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "真心话&大冒险"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx59cd6b056c18aabe",
+    "wxcc733a608b6b9822",
+    "wx63373aec2fa91707"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,6 @@
+
+  <view class='modal' hidden='{{modalhid}}'>
+  <view>{{sec}}秒自动关闭</view>
+    <view class='close' bindtap='close'>点击关闭X</view>
+    <ad class='modal-ad' unit-id="adunit-ebd9f6e6ca56e73d"></ad>
+  </view>

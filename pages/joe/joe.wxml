@@ -1,0 +1,36 @@
+<view class="leo-page">
+    <view class="leo-bd">
+        <!-- <view class="logo">
+            <image src="../../images/logo-128.png"></image>
+        </view> -->
+        <view class="title">
+            <text>专注小程序开发&网站建设 </text>
+        </view>
+        <view class="detail">
+           
+            <view bindtap='call'>
+            <text>联系电话 周生:13148728223</text>
+            </view>
+        </view>
+        
+        <view class="payButton">
+            <view>
+              <view>开发不易，赏杯咖啡吧</view>
+                <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="payMeMoney">微信打赏</button>
+            </view>
+
+        </view>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+
+            <ad unit-id="{{ad_id}}"></ad>
+
+
+        <view class="weui-footer__text">
+            Copyright © 2017-{{year}} Joe
+        </view>
+        <!-- <view class="weui-footer__text">
+            https://github.com/leochan2017/zgjm
+        </view> -->
+    </view>
+</view>

@@ -1,0 +1,14 @@
+<view class="navbar" style="{{'height: ' + navigationBarHeight}}">
+  <view style="{{'height: ' + statusBarHeight}}"></view>
+  <view class='title-container'>
+    <view class='capsule' wx:if="{{ back || home }}">
+      <view bindtap='back' wx:if="{{back}}">
+        <image src='/components/navbar/img/back.svg'></image>            
+      </view>
+      <view bindtap='backHome' wx:if="{{home}}">
+        <image src='/components/navbar/img/home.svg'></image>
+      </view>
+    </view>
+    <view class='left'>{{text}}</view>
+  </view>
+</view>
