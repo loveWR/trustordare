@@ -2,7 +2,7 @@ const Util = require('../../utils/util.js')
 Page({
     data: {
       year: (new Date()).getFullYear(),
-      ad_id: wx.getStorageSync('bannerAd')[3],
+      ad_id: wx.getStorageSync('bannerAd')[0],
         // canUseSetClipboardData: wx.canIUse('setClipboardData')
     },
     payMeMoney() {
@@ -21,7 +21,30 @@ Page({
     },
     call(){
       wx.makePhoneCall({
-        phoneNumber: '13148728223' //仅为示例，并非真实的电话号码
+        phoneNumber: '13148728223' 
       })
-    }
+    },
+  share() {
+    wx.previewImage({ urls: ['https://it.songvii.com/upload/applist/share.jpg'] })
+  },
+  help(){
+    wx.showModal({
+      title: '系统帮助',
+      content: '积分用于增值服务，敬请期待',
+      showCancel:false,
+      confirmText:'我知道了',
+      confirmColor:'black',
+      success:function(res){
+        console.log(res)
+      },
+      fail:function(res){
+        console.log('fail:'+res)
+      }
+    })
+  },
+  handleContact(e) {
+    console.log(e.path)
+    console.log(e.query)
+  },
+
 })

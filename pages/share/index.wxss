@@ -1,0 +1,15 @@
+/* pages/share/index.wxss */
+page {
+  background-color: #fff;
+}
+.weui-grid{
+  padding: 5px
+}
+.weui-grid__icon{
+  width: 85px;
+  height:85px
+}
+.ad{
+  position: relative;
+  bottom: 1px
+}

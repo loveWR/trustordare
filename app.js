@@ -22,6 +22,7 @@ App({
             });
           } else {
             var adList = res.data.response.data
+           // console.log(adList)
             var videoAd=new Array()
             var cpAd = new Array()
             var bannerAd = new Array()

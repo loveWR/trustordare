@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/index/start",
     "pages/joe/joe",
-    "components/modal-ad/index"
+    "pages/share/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,7 +14,37 @@
   "navigateToMiniProgramAppIdList": [
     "wx59cd6b056c18aabe",
     "wxcc733a608b6b9822",
-    "wx63373aec2fa91707"
+    "wx63373aec2fa91707",
+    "wx94272274d1787e71",
+    "wx0565bd8ca6e99321",
+    "wx0822fae80de3b620",
+    "wxbb58374cdce267a6",
+    "wx8f2bb8f588d90b4f",
+    "wxbeb90f1d6c17059b",
+    "wxb08bf9b9091ddcd4"
   ],
+ "tabBar": {
+  "selectedColor": "#ED6667",
+  "list": [
+    {
+      "pagePath": "pages/index/index",
+      "text": "真心话&大冒险",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/homeactive.png"
+    },
+    {
+      "pagePath": "pages/share/index",
+      "text": "好玩推荐",
+      "iconPath": "images/wish.png",
+      "selectedIconPath": "images/wishactive.png"
+    },
+    {
+      "pagePath": "pages/joe/joe",
+      "text": "关于",
+      "iconPath": "images/my.png",
+      "selectedIconPath": "images/myactive.png"
+    }
+  ]
+},
   "sitemapLocation": "sitemap.json"
 }

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-   
+   "add-tips": "/components/tips/index"
   },
-  "enablePullDownRefresh":false
+  "enablePullDownRefresh":true
 }

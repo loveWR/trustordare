@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<add-tips />
 <!-- <modal-ad></modal-ad> -->
 <view class="page">
 
@@ -33,19 +33,21 @@
           <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isRand}}"></icon>
         </view> 随机
       </label>
-    </checkbox-group> 
-    
-    <view class="weui-cell"  >
-                <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="moreGame">
-                    <image src="https://it.songvii.com/upload/applist/icon_more.jpg" style="width: 50px; height: 50px; display: block"/>
-                    <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">!</view>
-                </view>
-                <view class="weui-cell__bd">
-                    <view  bindtap="moreGame">更多精彩，等你来玩</view>
-                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="video_ad">点击开启</button>
-                </view>
-            </view>
-      <!-- <view class="weui-cell" wx:for="{{app}}" wx:key="k" >
+    </checkbox-group>
+
+    <view class="weui-cell" wx:if="{{show}}">
+      <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="moreGame">
+        <image src="https://it.songvii.com/upload/applist/icon_more.jpg" style="width: 50px; height: 50px; display: block" />
+        <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">!</view>
+      </view>
+      <view class="weui-cell__bd">
+        <view bindtap="moreGame">您已获得{{points}}积分</view>
+        <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="video_ad">观看视频，获得积分</button>
+      </view>
+
+    </view>
+
+    <!-- <view class="weui-cell" wx:for="{{app}}" wx:key="k" >
                 <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="jump" data-appid="{{item.appid}}">
                     <image src="{{item.icon}}" style="width: 50px; height: 50px; display: block"/>
                     
@@ -55,7 +57,7 @@
                     <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="jump" data-appid="{{item.appid}}">{{item.button}}</button>
                 </view>
             </view> -->
-      <!-- <view class="weui-cell">
+    <!-- <view class="weui-cell">
                 <view  class="weui-cell__hd" style="position: relative;margin-right: 10px;">
                     <image src="/images/zgjm.jpg" style="width: 50px; height: 50px; display: block"/>
                    
@@ -65,20 +67,19 @@
                     <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="zgjm">周公解梦</button>
                 </view>
             </view> -->
-     <!-- <navigator url='/pages/zgjm/index' class='more '>周公解梦>>></navigator> -->
-     <!-- <image src='/images/guanzhu.gif' mode='widthFix' class='guanzhu'></image> -->
-     <ad class='ad' style="margin-top:30px" unit-id="{{ad_id}}"></ad>
-     
-     
-     <!-- <button plain='true' class="grace-boxes-img grace-iconfont icon-write " size='mini' open-type="getUserInfo" bindgetuserinfo="bindSubmit">
+    <!-- <navigator url='/pages/zgjm/index' class='more '>周公解梦>>></navigator> -->
+    <!-- <image src='/images/guanzhu.gif' mode='widthFix' class='guanzhu'></image> -->
+    <ad class='ad' style="margin-top:30px" unit-id="{{ad_id}}" binderror='ad_err'></ad>
+
+
+    <!-- <button plain='true' class="grace-boxes-img grace-iconfont icon-write " size='mini' open-type="getUserInfo" bindgetuserinfo="bindSubmit">
       提交题目
     </button> -->
 
   </view>
-  
+
 </view>
 
-<view class='about'>
+<!-- <view class='about'>
       <navigator url='/pages/joe/joe' >关于</navigator>
-     </view>
-
+     </view> -->

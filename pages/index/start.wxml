@@ -4,16 +4,16 @@
 </view>
 
 <view class='foot_text'>把手机放在人群中央，点击箭鱼开始，最终箭鱼头部指向的人接受真心话或大冒险的惩罚</view>
-<view class="weui-cell"  >
+<!-- <view class="weui-cell"  >
                 <view class="weui-cell__hd" style="position: relative;margin-right: 10px;" bindtap="moreGame">
                     <image src="https://it.songvii.com/upload/applist/icon_more.jpg" style="width: 50px; height: 50px; display: block"/>
                     <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">!</view>
                 </view>
                 <view class="weui-cell__bd">
                     <view  bindtap="moreGame">更多精彩，等你来玩</view>
-                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="video_ad">点击开启</button>
+                    <button class="weui-btn mini-btn" type="primary" size="mini" bindtap="video_ad">观看视频</button>
                 </view>
-            </view>
+            </view> -->
 
             <ad class='ad' style="margin-top:30px" unit-id="{{ad_id}}"></ad>
            
